@@ -6,6 +6,13 @@
     to the remainder.
  */
 
+ /**
+ * [Divides array into equally sized arrays]
+ * @param  {Array} array [The oringinal array]
+ * @param  {Number} arrSize [The number of arrays the result should be divided into]
+ * @return {Array[][]}      [Array of arrSize arrays]
+ */
+
 
 const sortArray = (array, arrSize) => {
   if (arrSize < 2){
@@ -14,11 +21,13 @@ const sortArray = (array, arrSize) => {
   let normalArraySize = Math.ceil(array.length / arrSize);
   let finalArray = [];
   let counter = 0;
+  // if less than 2, no division required
   for(var i = 0; i<arrSize; i++){
     finalArray.push([]);
   }
   for(var i = 0; i < arrSize; i++){
     for(var x = 0; x<normalArraySize; x++) {
+      // once there is no items left we break out of the condition
       if(array[counter] === undefined){
         break;
       }

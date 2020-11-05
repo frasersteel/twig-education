@@ -15,14 +15,15 @@
 
 
 const sortArray = (array, arrSize) => {
+  // if less than 2, no division required
   if (arrSize < 2){
     return array;
   }
   let normalArraySize = Math.ceil(array.length / arrSize);
   let finalArray = [];
   let counter = 0;
-  // if less than 2, no division required
   for(var i = 0; i<arrSize; i++){
+    // create n empty arrays
     finalArray.push([]);
   }
   for(var i = 0; i < arrSize; i++){
